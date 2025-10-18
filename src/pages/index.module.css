@@ -1,0 +1,469 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+@import '../css/theme.css';
+
+.heroBanner {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1a2e 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+[data-theme='light'] .heroBanner {
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 50%, #f0f4f9 100%);
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(204, 141, 74, 0.02) 2px,
+      rgba(204, 141, 74, 0.02) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(204, 141, 74, 0.02) 2px,
+      rgba(204, 141, 74, 0.02) 4px
+    );
+  opacity: 0.5;
+}
+
+[data-theme='light'] .heroBackground {
+  opacity: 0.3;
+}
+
+.heroPatternSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.heroShape1 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at 30% 70%, rgba(204, 141, 74, 0.25) 0%, rgba(139, 111, 71, 0.1) 40%, transparent 70%);
+  border-radius: 50%;
+  top: -200px;
+  right: -100px;
+  animation: bethrou-float 8s ease-in-out infinite;
+  filter: blur(60px);
+  will-change: transform;
+}
+
+.heroShape2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at 60% 40%, rgba(229, 179, 128, 0.2) 0%, rgba(204, 141, 74, 0.08) 30%, transparent 65%);
+  border-radius: 50%;
+  bottom: -100px;
+  left: 10%;
+  animation: bethrou-float 10s ease-in-out infinite reverse;
+  filter: blur(50px);
+  will-change: transform;
+}
+
+.heroShape3 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at 40% 50%, rgba(139, 111, 71, 0.15) 0%, rgba(204, 141, 74, 0.05) 35%, transparent 70%);
+  border-radius: 50%;
+  top: 50%;
+  left: -150px;
+  animation: bethrou-float 12s ease-in-out infinite;
+  filter: blur(45px);
+  will-change: transform;
+}
+
+@keyframes bethrou-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.6;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-30px) translateX(15px) rotate(2deg);
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.55;
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  backdrop-filter: blur(0px);
+}
+
+.heroGlow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(204, 141, 74, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  will-change: transform;
+}
+
+.heroMeta {
+  display: none;
+}
+
+.mvpBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(204, 141, 74, 0.3);
+  border-radius: 50px;
+  background: rgba(204, 141, 74, 0.08);
+  color: #E5B380;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  animation: bethrou-slideUp 0.8s ease-out both;
+}
+
+[data-theme='light'] .mvpBadge {
+  background: rgba(204, 141, 74, 0.1);
+  border-color: rgba(204, 141, 74, 0.5);
+  color: #c85a2e;
+}
+
+.mvpDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #E5B380;
+  animation: mvpPulse 2s ease-in-out infinite;
+}
+
+[data-theme='light'] .mvpDot {
+  background: #c85a2e;
+}
+
+@keyframes mvpPulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(229, 179, 128, 0.7);
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 8px rgba(229, 179, 128, 0);
+  }
+}
+
+.heroTitle {
+  color: #ffffff;
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin: 1.5rem 0 1rem;
+  animation: bethrou-slideUp 0.8s ease-out 0.1s both;
+  background: linear-gradient(135deg, #ffffff 0%, #E5B380 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 20px rgba(204, 141, 74, 0.1);
+}
+
+[data-theme='light'] .heroTitle {
+  color: #0a0e27;
+  background: linear-gradient(135deg, #0a0e27 0%, #CC8D4A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes bethrou-slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bethrou-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(204, 141, 74, 0.4), 0 0 40px rgba(204, 141, 74, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(204, 141, 74, 0.6), 0 0 60px rgba(204, 141, 74, 0.3);
+  }
+}
+
+.heroTitle::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 6px;
+  background: linear-gradient(90deg, #CC8D4A 0%, #E5B380 50%, #CC8D4A 100%);
+  margin: 1rem auto 0;
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgba(204, 141, 74, 0.4), 0 0 40px rgba(204, 141, 74, 0.2);
+  animation: bethrou-glow 3s ease-in-out infinite;
+}
+
+.heroSubtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.3rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 2rem auto;
+  font-weight: 400;
+  animation: bethrou-slideUp 0.8s ease-out 0.2s both;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='light'] .heroSubtitle {
+  color: rgba(10, 14, 39, 0.75);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.heroStats {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  animation: bethrou-slideUp 0.8s ease-out 0.4s both;
+}
+
+.buttonPrimary,
+.buttonSecondary,
+.buttonGhost {
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttonPrimary {
+  background: linear-gradient(135deg, #CC8D4A, #E5B380);
+  color: #0a0e27;
+  box-shadow: 0 8px 24px rgba(204, 141, 74, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.buttonPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(204, 141, 74, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.buttonSecondary {
+  background: rgba(204, 141, 74, 0.05);
+  color: #E5B380;
+  border: 2px solid #CC8D4A;
+}
+
+.buttonSecondary:hover {
+  background: rgba(204, 141, 74, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(204, 141, 74, 0.2);
+}
+
+[data-theme='light'] .buttonSecondary {
+  color: #CC8D4A;
+  border: 2px solid #CC8D4A;
+  background: rgba(204, 141, 74, 0.03);
+}
+
+[data-theme='light'] .buttonSecondary:hover {
+  background: rgba(204, 141, 74, 0.12);
+}
+
+.buttonGhost {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.buttonGhost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #E5B380;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(204, 141, 74, 0.15);
+}
+
+[data-theme='light'] .buttonGhost {
+  color: rgba(10, 14, 39, 0.7);
+  border: 1px solid rgba(10, 14, 39, 0.2);
+}
+
+[data-theme='light'] .buttonGhost:hover {
+  background: rgba(10, 14, 39, 0.06);
+  border-color: rgba(10, 14, 39, 0.4);
+  color: #CC8D4A;
+  box-shadow: 0 8px 20px rgba(204, 141, 74, 0.1);
+}
+
+.heroLogoContainer {
+  display: none;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    min-height: auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .heroStats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem;
+    margin: 2.5rem 0;
+  }
+
+  .buttons {
+    gap: 1rem;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary,
+  .buttonGhost {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .heroLogo {
+    height: 90px;
+  }
+
+  .heroShape1 {
+    width: 400px;
+    height: 400px;
+    top: -150px;
+    right: -50px;
+  }
+
+  .heroShape2 {
+    width: 300px;
+    height: 300px;
+    bottom: 0;
+  }
+
+  .heroShape3 {
+    width: 250px;
+    height: 250px;
+    left: -125px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .heroBanner {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .heroTitle::after {
+    width: 40px;
+    height: 4px;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+    margin: 1.5rem auto;
+  }
+
+  .heroStats {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .statNumber {
+    font-size: 1.2rem;
+  }
+
+  .statLabel {
+    font-size: 0.75rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary,
+  .buttonGhost {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .heroLogo {
+    height: 70px;
+  }
+}
+
+

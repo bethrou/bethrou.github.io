@@ -1,0 +1,56 @@
+# Robots.txt for Bethrou Documentation
+# This file guides search engine crawlers on how to index the site
+
+# Allow all crawlers by default
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /_static/
+Disallow: /.git/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for other bots
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# AI Bots and Data Collection
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://bethrou.github.io/sitemap.xml

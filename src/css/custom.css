@@ -1,0 +1,34 @@
+/**
+ * Global Docusaurus Styles
+ * Theme and utilities are imported from theme.css and utilities.css
+ */
+
+@import './theme.css';
+@import './utilities.css';
+
+/* Docusaurus IFM variables - mapped from theme.css */
+:root {
+  --ifm-color-primary: var(--bethrou-primary);
+  --ifm-color-primary-dark: var(--bethrou-primary-dark);
+  --ifm-color-primary-darker: var(--bethrou-primary-darker);
+  --ifm-color-primary-darkest: var(--bethrou-primary-darkest);
+  --ifm-color-primary-light: var(--bethrou-primary-light);
+  --ifm-color-primary-lighter: var(--bethrou-primary-lighter);
+  --ifm-color-primary-lightest: var(--bethrou-primary-lightest);
+
+  --ifm-color-secondary: var(--bethrou-secondary);
+  --ifm-color-secondary-dark: var(--bethrou-secondary-dark);
+  --ifm-color-secondary-darker: var(--bethrou-secondary-darker);
+  --ifm-color-secondary-darkest: var(--bethrou-secondary-darkest);
+  --ifm-color-secondary-light: var(--bethrou-secondary-light);
+  --ifm-color-secondary-lighter: var(--bethrou-secondary-lighter);
+  --ifm-color-secondary-lightest: var(--bethrou-secondary-lightest);
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(204, 141, 74, 0.1);
+}
+
+[data-theme='dark'] {
+  --docusaurus-highlighted-code-line-bg: rgba(229, 179, 128, 0.15);
+}
+
