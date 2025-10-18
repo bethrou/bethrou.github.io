@@ -1,0 +1,62 @@
+{
+  "name": "Bethrou - Decentralized P2P Proxy Network",
+  "short_name": "Bethrou",
+  "description": "A decentralized peer-to-peer proxy network built on libp2p",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/img/bethrou-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/bethrou-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/img/bethrou-banner.svg",
+      "sizes": "1920x1080",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Getting Started",
+      "short_name": "Start",
+      "description": "Get started with Bethrou",
+      "url": "/docs/getting-started/introduction",
+      "icons": [
+        {
+          "src": "/img/bethrou-icon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Architecture",
+      "short_name": "Arch",
+      "description": "Learn about Bethrou architecture",
+      "url": "/docs/concepts/architecture",
+      "icons": [
+        {
+          "src": "/img/bethrou-icon.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ]
+}

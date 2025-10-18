@@ -1,0 +1,496 @@
+/**
+ * Bethrou CSS Utilities
+ * Comprehensive utility classes for layouts, spacing, effects, and common patterns
+ * Imported by all components to eliminate duplication
+ */
+
+@import './theme.css';
+
+/* ============================================================================
+   LAYOUT UTILITIES
+   ============================================================================ */
+
+/* Flexbox */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.grid-auto {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Alignment */
+.text-center {
+  text-align: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* ============================================================================
+   SPACING UTILITIES
+   ============================================================================ */
+
+.gap-sm {
+  gap: var(--bethrou-spacing-sm);
+}
+
+.gap-md {
+  gap: var(--bethrou-spacing-md);
+}
+
+.gap-lg {
+  gap: var(--bethrou-spacing-lg);
+}
+
+.gap-xl {
+  gap: var(--bethrou-spacing-xl);
+}
+
+.gap-2xl {
+  gap: var(--bethrou-spacing-2xl);
+}
+
+/* Padding */
+.p-md {
+  padding: var(--bethrou-spacing-md);
+}
+
+.p-lg {
+  padding: var(--bethrou-spacing-lg);
+}
+
+.p-xl {
+  padding: var(--bethrou-spacing-xl);
+}
+
+.px-lg {
+  padding-left: var(--bethrou-spacing-lg);
+  padding-right: var(--bethrou-spacing-lg);
+}
+
+.py-lg {
+  padding-top: var(--bethrou-spacing-lg);
+  padding-bottom: var(--bethrou-spacing-lg);
+}
+
+/* Margin */
+.m-auto {
+  margin: 0 auto;
+}
+
+.mb-md {
+  margin-bottom: var(--bethrou-spacing-md);
+}
+
+.mb-lg {
+  margin-bottom: var(--bethrou-spacing-lg);
+}
+
+.mb-xl {
+  margin-bottom: var(--bethrou-spacing-xl);
+}
+
+.mt-md {
+  margin-top: var(--bethrou-spacing-md);
+}
+
+.mt-lg {
+  margin-top: var(--bethrou-spacing-lg);
+}
+
+/* ============================================================================
+   BORDER RADIUS UTILITIES
+   ============================================================================ */
+
+.rounded-sm {
+  border-radius: var(--bethrou-radius-sm);
+}
+
+.rounded-md {
+  border-radius: var(--bethrou-radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--bethrou-radius-lg);
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+/* ============================================================================
+   SHADOW UTILITIES
+   ============================================================================ */
+
+.shadow-sm {
+  box-shadow: var(--bethrou-shadow-sm);
+}
+
+.shadow-md {
+  box-shadow: var(--bethrou-shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--bethrou-shadow-lg);
+}
+
+.shadow-primary-sm {
+  box-shadow: var(--bethrou-shadow-primary-sm);
+}
+
+.shadow-primary-md {
+  box-shadow: var(--bethrou-shadow-primary-md);
+}
+
+.shadow-primary-lg {
+  box-shadow: var(--bethrou-shadow-primary-lg);
+}
+
+/* ============================================================================
+   TRANSITION UTILITIES
+   ============================================================================ */
+
+.transition-fast {
+  transition: all var(--bethrou-transition-fast);
+}
+
+.transition {
+  transition: all var(--bethrou-transition-base);
+}
+
+.transition-slow {
+  transition: all var(--bethrou-transition-slow);
+}
+
+.transition-transform {
+  transition: transform var(--bethrou-transition-base);
+}
+
+.transition-color {
+  transition: color var(--bethrou-transition-base);
+}
+
+.transition-width {
+  transition: width 0.4s ease;
+}
+
+/* ============================================================================
+   CARD UTILITIES
+   ============================================================================ */
+
+.card-base {
+  border-radius: var(--bethrou-radius-lg);
+  padding: var(--bethrou-spacing-xl);
+  background: var(--ifm-card-background-color);
+  border: 2px solid transparent;
+  box-shadow: var(--bethrou-shadow-md);
+  transition: all var(--bethrou-transition-base);
+}
+
+.card-hover {
+  border-color: var(--bethrou-primary);
+  box-shadow: var(--bethrou-shadow-primary-lg);
+  transform: translateY(-6px);
+}
+
+.card-flat {
+  border-radius: var(--bethrou-radius-md);
+  padding: var(--bethrou-spacing-lg);
+  background: var(--ifm-background-surface-color);
+  border: 2px solid var(--ifm-color-emphasis-200);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all var(--bethrou-transition-base);
+}
+
+.card-flat:hover {
+  border-color: var(--bethrou-primary);
+  box-shadow: var(--bethrou-shadow-primary-md);
+  transform: translateY(-4px);
+}
+
+.card-minimal {
+  border-radius: var(--bethrou-radius-md);
+  padding: var(--bethrou-spacing-lg);
+  transition: all var(--bethrou-transition-base);
+}
+
+.card-minimal:hover {
+  box-shadow: var(--bethrou-shadow-primary-md);
+  transform: translateY(-4px);
+}
+
+/* ============================================================================
+   CONTAINER UTILITIES
+   ============================================================================ */
+
+.container-max-width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container-padded {
+  padding: 0 var(--bethrou-spacing-lg);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.fill-height {
+  height: 100%;
+}
+
+/* ============================================================================
+   CIRCLE/BADGE UTILITIES
+   ============================================================================ */
+
+.circle {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-lg {
+  width: 56px;
+  height: 56px;
+}
+
+.circle-sm {
+  width: 40px;
+  height: 40px;
+}
+
+.circle-gradient {
+  background: linear-gradient(135deg, var(--bethrou-primary) 0%, var(--bethrou-secondary) 100%);
+  color: white;
+  font-weight: 800;
+}
+
+.circle-gradient:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* ============================================================================
+   GRADIENT UTILITIES
+   ============================================================================ */
+
+.gradient-primary {
+  background: linear-gradient(135deg, var(--bethrou-primary) 0%, var(--bethrou-primary-light) 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, var(--bethrou-primary) 0%, var(--bethrou-secondary) 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--bethrou-primary) 0%, var(--bethrou-primary-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================================
+   STATE UTILITIES
+   ============================================================================ */
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.active {
+  background: var(--bethrou-primary);
+  box-shadow: 0 0 8px rgba(204, 141, 74, 0.5);
+}
+
+.focus-ring {
+  outline: 2px solid var(--bethrou-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================================================
+   OVERFLOW UTILITIES
+   ============================================================================ */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+/* ============================================================================
+   TEXT UTILITIES
+   ============================================================================ */
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============================================================================
+   VISIBILITY UTILITIES
+   ============================================================================ */
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ============================================================================
+   RESPONSIVE UTILITIES
+   ============================================================================ */
+
+@media screen and (max-width: 996px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hide-lg {
+    display: none;
+  }
+
+  .gap-xl {
+    gap: var(--bethrou-spacing-lg);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .flex-col-mobile {
+    flex-direction: column;
+  }
+
+  .gap-xl,
+  .gap-2xl {
+    gap: var(--bethrou-spacing-md);
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .circle-lg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .p-xl {
+    padding: var(--bethrou-spacing-lg);
+  }
+}
+
+/* ============================================================================
+   DARK MODE OVERRIDES
+   ============================================================================ */
+
+[data-theme='dark'] .card-base {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .card-base:hover {
+  box-shadow: var(--bethrou-shadow-primary-lg);
+}
+
+[data-theme='dark'] .card-flat {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .card-flat:hover {
+  box-shadow: var(--bethrou-shadow-primary-md);
+}

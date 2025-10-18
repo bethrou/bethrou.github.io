@@ -1,0 +1,13 @@
+/**
+ * SectionBody Component Styles
+ * Provides consistent container and spacing for section content
+ */
+
+@import '../../css/theme.css';
+@import '../../css/utilities.css';
+
+.body {
+  width: 100%;
+  padding: 0;
+  animation: bethrou-fadeInUp var(--bethrou-transition-slow);
+}
