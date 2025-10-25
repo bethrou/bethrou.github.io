@@ -137,7 +137,7 @@ const config: Config = {
             attributes: {
                 name: 'og:image',
                 property: 'og:image',
-                content: 'https://bethrou.github.io/img/bethrou-banner.svg',
+                content: 'https://bethrou.github.io/img/bethrou-social.png',
             },
         },
         {
@@ -173,7 +173,7 @@ const config: Config = {
             tagName: 'meta',
             attributes: {
                 name: 'twitter:image',
-                content: 'https://bethrou.github.io/img/bethrou-banner.svg',
+                content: 'https://bethrou.github.io/img/bethrou-social.png',
             },
         },
         {
@@ -203,7 +203,7 @@ const config: Config = {
                 alternateName: 'Bethrou P2P Proxy Network',
                 description: 'A decentralized peer-to-peer proxy network built on libp2p. Route internet traffic through trusted nodes with SOCKS5, full privacy, and no central servers.',
                 url: 'https://bethrou.github.io',
-                image: 'https://bethrou.github.io/img/bethrou-banner.svg',
+                image: 'https://bethrou.github.io/img/bethrou-social.png',
                 applicationCategory: 'NetworkApplication',
                 operatingSystem: 'Any',
                 releaseNotes: 'https://github.com/bethrou/bethrou/releases',
@@ -302,7 +302,7 @@ const config: Config = {
         '@docusaurus/theme-mermaid',
     ],
     themeConfig: {
-        image: 'img/bethrou-banner.svg',
+        image: 'img/bethrou-social.png',
         metadata: [
             {
                 name: 'theme-color',
